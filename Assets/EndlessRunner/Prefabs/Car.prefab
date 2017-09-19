@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CarSpeed: 0.1
-  StrafeSpeed: 0.25
+  StrafeSpeed: 1
   BulletPrefab: {fileID: 1563231104472588, guid: f897b4ccf80b39043902ac3ded81707a,
     type: 2}
   BulletSpawn: {fileID: 4710612180157890}
