@@ -11,11 +11,6 @@ public class PlayerController : MonoBehaviour
     //Float for the car position
     Vector3 CarPosition = new Vector3(0 ,0, 0);
 
-    //Data for spawning the bullet
-    public GameObject BulletPrefab;
-    public Transform BulletSpawn;
-    public float BulletSpeed = 50;
-
     // Use this for initialization
     void Start ()
     {
