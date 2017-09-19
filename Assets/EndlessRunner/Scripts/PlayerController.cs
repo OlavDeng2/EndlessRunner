@@ -36,11 +36,6 @@ public class PlayerController : MonoBehaviour
             CarPosition.x += StrafeSpeed;
             //Turn Right
         }
-
-        if (Input.GetButtonDown("Fire"))
-        {
-            FireGun();
-        }
 	}
 
     //update is called at fixed intervals
@@ -56,12 +51,4 @@ public class PlayerController : MonoBehaviour
         CarPosition.z += CarSpeed;
         transform.position = CarPosition;
     }
-
-    private void FireGun()
-    {
-        var bullet = Instantiate(BulletPrefab, BulletSpawn.position, BulletSpawn.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.up * BulletSpeed;
-    }
-
-
 }
