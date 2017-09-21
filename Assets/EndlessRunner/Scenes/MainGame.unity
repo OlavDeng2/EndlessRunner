@@ -361,6 +361,11 @@ Prefab:
       propertyPath: CarGravity
       value: -0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114069569868803440, guid: bf243f65d9fd9554b8cb241f17802f96,
+        type: 2}
+      propertyPath: CarJumpSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf243f65d9fd9554b8cb241f17802f96, type: 2}
   m_IsPrefabParent: 0
