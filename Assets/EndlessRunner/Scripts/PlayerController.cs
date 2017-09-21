@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     //Floats for the car speeds
     public float CarSpeed = 5f;
     public float StrafeSpeed = 5f;
+    public float CarJumpSpeed = 0.1f;
     public float CarGravity = -0.1f;
     private float CarVerticalSpeed = 0f;
 
@@ -32,6 +33,11 @@ public class PlayerController : MonoBehaviour
         {
             CarPosition.x += StrafeSpeed;
             //Turn Right
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            Jump();
         }
 	}
 
@@ -65,6 +71,13 @@ public class PlayerController : MonoBehaviour
             CarVerticalSpeed = 0f;
             CarPosition.y = 1;
         }
+    }
 
+    private void Jump()
+    {
+        if(CarPosition.y <= 1)
+        {
+            CarVerticalSpeed += CarJumpSpeed;
+        }
     }
 }
