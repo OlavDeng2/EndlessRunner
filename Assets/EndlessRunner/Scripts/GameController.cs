@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
-    public GameObject enemy;
+    public GameObject Enemy;
+    public GameObject PickUp;
+
 
     // Use this for initialization
     void Start ()
     {
-        StartCoroutine(Spawn(enemy));
+        StartCoroutine(Spawn(Enemy));
+        StartCoroutine(Spawn(PickUp));
+
     }
 
     // Update is called once per fixed unit of time

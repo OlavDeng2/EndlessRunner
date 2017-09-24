@@ -478,7 +478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a9e9bc57931f8459150d6914372814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1406845733897196, guid: 4eac7f527466d1941900c295c91b02ef, type: 2}
+  Enemy: {fileID: 1406845733897196, guid: 4eac7f527466d1941900c295c91b02ef, type: 2}
+  PickUp: {fileID: 1407716897117634, guid: 65ebbd8cb4653eb4293752d77d2010bd, type: 2}
 --- !u!4 &1757712211
 Transform:
   m_ObjectHideFlags: 0
