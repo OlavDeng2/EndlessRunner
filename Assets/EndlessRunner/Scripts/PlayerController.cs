@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //Floats for the car speeds
-    public float CarSpeed = 5f;
     public float StrafeSpeed = 5f;
     public float CarJumpSpeed = 0.1f;
     public float CarGravity = -0.1f;
@@ -52,15 +51,12 @@ public class PlayerController : MonoBehaviour
     //Move the car forwards at a fixed speed
     private void MoveCar()
     {
-        CarPosition.z += CarSpeed;
         CarPosition.y += CarVerticalSpeed;
         transform.position = CarPosition;
     }
 
     private void ApplyGravity()
     {
-        Debug.Log(CarPosition.y);
-
         if(CarPosition.y >= 5)
         {
             CarVerticalSpeed = CarGravity;

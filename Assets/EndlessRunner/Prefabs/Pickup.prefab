@@ -9,22 +9,22 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1407716897117634}
+  m_RootGameObject: {fileID: 1280621738718444}
   m_IsPrefabParent: 1
---- !u!1 &1407716897117634
+--- !u!1 &1280621738718444
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4086553293388736}
-  - component: {fileID: 33320313206579264}
-  - component: {fileID: 65530279521259978}
-  - component: {fileID: 23341097108254824}
-  - component: {fileID: 95045298956840488}
-  - component: {fileID: 114540246939317766}
-  - component: {fileID: 54546511411660592}
+  - component: {fileID: 4201467652222390}
+  - component: {fileID: 33400542906958530}
+  - component: {fileID: 65402336781821904}
+  - component: {fileID: 23663419834908682}
+  - component: {fileID: 95316560468660938}
+  - component: {fileID: 114428600614069528}
+  - component: {fileID: 54460521771180458}
   m_Layer: 0
   m_Name: Pickup
   m_TagString: Pickups
@@ -32,25 +32,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4086553293388736
+--- !u!4 &4201467652222390
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407716897117634}
+  m_GameObject: {fileID: 1280621738718444}
   m_LocalRotation: {x: 0.35355338, y: -0.1464466, z: 0.35355338, w: 0.8535535}
-  m_LocalPosition: {x: 0.3192476, y: 1.3535534, z: 56.72823}
+  m_LocalPosition: {x: -2.9312344, y: 1.3535534, z: 26.874481}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 45}
---- !u!23 &23341097108254824
+--- !u!23 &23663419834908682
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407716897117634}
+  m_GameObject: {fileID: 1280621738718444}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -77,19 +77,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33320313206579264
+--- !u!33 &33400542906958530
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407716897117634}
+  m_GameObject: {fileID: 1280621738718444}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54546511411660592
+--- !u!54 &54460521771180458
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407716897117634}
+  m_GameObject: {fileID: 1280621738718444}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -99,25 +99,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65530279521259978
+--- !u!65 &65402336781821904
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407716897117634}
+  m_GameObject: {fileID: 1280621738718444}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &95045298956840488
+--- !u!95 &95316560468660938
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407716897117634}
+  m_GameObject: {fileID: 1280621738718444}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 65d9ad26bbee52a4f9d98dc10f1bcea4, type: 2}
@@ -128,14 +128,16 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114540246939317766
+--- !u!114 &114428600614069528
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1407716897117634}
+  m_GameObject: {fileID: 1280621738718444}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08b5d099432e190438d107308cfc72f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PickupVelocity: {x: 0, y: 0, z: -5}
+  PickupRB: {fileID: 54460521771180458}
