@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/EndlessRunner/Scenes/MainMenu.unity
+    guid: ab4ba562e983e374d8fe29ecb1120164
+  - enabled: 1
+    path: Assets/EndlessRunner/Scenes/MainGame.unity
+    guid: 11f702eb203492c488ec9bb0be8eeb92
+  - enabled: 1
+    path: Assets/EndlessRunner/Scenes/Credits.unity
+    guid: b749eb7b011a469449f71fa4ed1a5852
