@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour {
     {
         while(true)
         {
-            Vector3 spawnPosition = new Vector3(Random.Range(-2, 1) * LaneDistance, 1, 1);
+            Vector3 spawnPosition = new Vector3(Random.Range(-1, 2) * LaneDistance, 1, 1);
 
             Quaternion spawnRotation = Quaternion.identity;
 

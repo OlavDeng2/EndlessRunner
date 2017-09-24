@@ -22,13 +22,13 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		if (Input.GetButtonDown("Left"))
+		if (Input.GetButtonDown("Left") && transform.position.x != -5)
         {
             CarPosition.x -= StrafeSpeed;
             // turn left
         }
 
-        if (Input.GetButtonDown("Right"))
+        if (Input.GetButtonDown("Right") && transform.position.x != 5)
         {
             CarPosition.x += StrafeSpeed;
             //Turn Right
