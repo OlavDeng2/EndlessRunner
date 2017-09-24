@@ -7,6 +7,10 @@ public class PickupController : MonoBehaviour
     public Vector3 PickupVelocity = new Vector3(0, 0, 0);
     public Rigidbody PickupRB;
 
+    private void Start()
+    {
+
+    }
     private void FixedUpdate()
     {
         PickupRB.velocity = PickupVelocity;
@@ -19,6 +23,7 @@ public class PickupController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             GameObject.Destroy(gameObject);
+            GameObject.Find("GameController").GetComponent<GameController>().Score += 1;
         }
     }
 }

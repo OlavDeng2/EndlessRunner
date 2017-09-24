@@ -8,28 +8,30 @@ public class GameController : MonoBehaviour {
     public GameObject PickUp;
     public int LaneDistance = 5;
 
+    public int Score = 0;
+
     // Use this for initialization
     void Start ()
     {
-        StartCoroutine(Spawn(Enemy));
-        StartCoroutine(Spawn(PickUp));
+        StartCoroutine(Spawn());
 
     }
 
-    // Update is called once per fixed unit of time
-    void FixedUpdate ()
+    IEnumerator Spawn()
     {
-    }
-
-    IEnumerator Spawn(GameObject Spawnable)
-    {
-        while(true)
+        while (true)
         {
             Vector3 spawnPosition = new Vector3(Random.Range(-1, 2) * LaneDistance, 1, 1);
 
             Quaternion spawnRotation = Quaternion.identity;
-
-            Instantiate(Spawnable, spawnPosition, spawnRotation);
+            if( Random.Range(0, 2) == 0)
+            {
+                Instantiate(Enemy, spawnPosition, spawnRotation);
+            }
+            else
+            {
+                Instantiate(PickUp, spawnPosition, spawnRotation);
+            }
 
             yield return new WaitForSeconds(Random.Range(1f, 2f));
         }
