@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour {
 
     public GameObject Enemy;
     public GameObject PickUp;
-
+    public int LaneDistance = 5;
 
     // Use this for initialization
     void Start ()
@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour {
     {
         while(true)
         {
-            Vector3 spawnPosition = new Vector3(Random.Range(-2, 1), 1, 1);
+            Vector3 spawnPosition = new Vector3(Random.Range(-2, 1) * LaneDistance, 1, 1);
 
             Quaternion spawnRotation = Quaternion.identity;
 
