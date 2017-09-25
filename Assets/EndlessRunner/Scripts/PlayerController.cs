@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     void Start ()
     {
         CarPosition = transform.position;
-        CarJump = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
