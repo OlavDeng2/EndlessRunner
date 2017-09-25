@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 1757712210}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -516,6 +516,7 @@ MonoBehaviour:
   Enemy: {fileID: 453484191}
   PickUp: {fileID: 1280621738718444, guid: 65ebbd8cb4653eb4293752d77d2010bd, type: 2}
   LaneDistance: 5
+  Score: 0
 --- !u!4 &1757712211
 Transform:
   m_ObjectHideFlags: 0

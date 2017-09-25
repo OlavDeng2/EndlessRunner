@@ -13,8 +13,6 @@ public class PlayerController : MonoBehaviour
     //Float for the car position
     Vector3 CarPosition = new Vector3(0 ,0, 0);
 
-    Animator CarJump;
-
     // Use this for initialization
     void Start ()
     {
