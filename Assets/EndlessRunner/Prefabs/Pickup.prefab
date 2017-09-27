@@ -139,5 +139,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b5d099432e190438d107308cfc72f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickupVelocity: {x: 0, y: 0, z: -5}
+  PickupVelocity: {x: 0, y: 0, z: -20}
   PickupRB: {fileID: 54460521771180458}

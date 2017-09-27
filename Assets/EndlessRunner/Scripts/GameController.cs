@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour {
     public int LaneDistance = 5;
     public int DestroyTime = 20;
 
+    public float SpawnTime = 1f;
+
     //initialize the score
     public int Score = 0;
 
@@ -43,7 +45,7 @@ public class GameController : MonoBehaviour {
             }
 
             //wait a random amount of time before spawning the next object
-            yield return new WaitForSeconds(Random.Range(1f, 2f));
+            yield return new WaitForSeconds(SpawnTime);
         }
 
     }

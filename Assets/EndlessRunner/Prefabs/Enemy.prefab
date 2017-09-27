@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7832b5aceaefb94ab865c48c93edb4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyVelocity: {x: 0, y: 0, z: -5}
+  EnemyVelocity: {x: 0, y: 0, z: -20}
   EnemyRB: {fileID: 54498243404724062}
   GameOverScreen: 3
 --- !u!136 &136137389005669616
