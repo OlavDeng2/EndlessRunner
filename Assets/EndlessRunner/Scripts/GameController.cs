@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
     public GameObject PickUp = null;
     public int LaneDistance = 5;
     public int DestroyTime = 20;
+    public int SpawnDistance = 1;
 
     public float SpawnTime = 1f;
 
@@ -28,7 +29,7 @@ public class GameController : MonoBehaviour {
         while (true)
         {
             //get the position for where the enemies or pickups will spawn
-            Vector3 spawnPosition = new Vector3(Random.Range(-1, 2) * LaneDistance, 1, 1);
+            Vector3 spawnPosition = new Vector3(Random.Range(-1, 2) * LaneDistance, 2, SpawnDistance);
             // get the rotation for the objects
             Quaternion spawnRotation = Quaternion.identity;
 

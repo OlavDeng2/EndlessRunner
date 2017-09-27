@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public AnimationCurve CarJump;
+    public float JumpHeight;
+
+    float JumpTime;
+    float CurvedValue;
+    Vector3 EndPos;
+    bool IsJumping = false;
+
     //Floats for the car speeds
     public float StrafeSpeed = 5f;
-    public float CarJumpSpeed = 0.1f;
-    public float CarGravity = -0.1f;
-    private float CarVerticalSpeed = 0f;
-
+    
     //Float for the car position
     Vector3 CarPosition = new Vector3(0 ,0, 0);
 
@@ -36,49 +41,42 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            Jump();
+            JumpTime = 0f;
+            IsJumping = true;
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if(IsJumping)
         {
             Jump();
         }
     }
 
+
     //update is called at fixed intervals
     private void FixedUpdate()
     {
         MoveCar();
-        ApplyGravity();
     }
 
 
     //Move the car forwards at a fixed speed
     private void MoveCar()
     {
-        CarPosition.y += CarVerticalSpeed;
         transform.position = CarPosition;
     }
 
-    private void ApplyGravity()
-    {
-        if(CarPosition.y >= 5)
-        {
-            CarVerticalSpeed = CarGravity;
-        }
 
-        if (CarPosition.y <= 1)
-        {
-            CarVerticalSpeed = 0f;
-            CarPosition.y = 1;
-        }
-    }
 
     private void Jump()
     {
-        if(CarPosition.y <= 1)
+        EndPos = new Vector3(CarPosition.x, JumpHeight, 1);
+        JumpTime += Time.deltaTime;
+        CurvedValue = CarJump.Evaluate(JumpTime);
+        transform.position = Vector3.Lerp(CarPosition, EndPos, CurvedValue);
+
+        if(JumpTime > 1f)
         {
-            CarVerticalSpeed += CarJumpSpeed;
+            IsJumping = false;
         }
     }
 }

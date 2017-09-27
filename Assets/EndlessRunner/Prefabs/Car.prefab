@@ -175,5 +175,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409cb974dcafe254090ad8381f343730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CarSpeed: 0.1
   StrafeSpeed: 5
+  CarJump:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.0062561035
+      inSlope: 2.882599
+      outSlope: 2.882599
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.49832264
+      value: 0.99972916
+      inSlope: 0.0010088312
+      outSlope: 0.0010088312
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.9916783
+      value: -0.0045193136
+      inSlope: -2.8497722
+      outSlope: -2.8497722
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
