@@ -14,16 +14,4 @@ public class PickupController : MonoBehaviour
         PickupRB.velocity = PickupVelocity;
 
     }
-
-
-    void OnTriggerEnter(Collider collision)
-    {
-        //check if the object that hits the Pickup is the player
-        if (collision.gameObject.tag == "Player")
-        {
-            //Destroy the Pickup and update the score
-            GameObject.Destroy(gameObject);
-            GameObject.Find("GameController").GetComponent<GameController>().Score += 1;
-        }
-    }
 }

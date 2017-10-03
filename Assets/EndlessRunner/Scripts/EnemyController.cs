@@ -18,21 +18,4 @@ public class EnemyController : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider collision)
-    {
-        //check if enemy collided with the player
-        if (collision.gameObject.tag == "Player")
-        {
-
-            //if the enemy collided with the player, call LoadScene
-            Debug.Log("Player Collided with enemy");
-            LoadScene(GameOverScreen);
-        }
-    }
-
-    //LoadScene function to load the GameOver scene when losing
-    private void LoadScene(int Scene)
-    {
-        SceneManager.LoadScene(Scene);
-    }
 }

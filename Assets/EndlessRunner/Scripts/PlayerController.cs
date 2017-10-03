@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Declare variables for the jumping of the car
     public AnimationCurve CarJump;
     public float JumpHeight;
-
     float JumpTime;
     float CurvedValue;
     Vector3 EndPos;
@@ -39,9 +39,11 @@ public class PlayerController : MonoBehaviour
             //Turn Right
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !IsJumping)
         {
             JumpTime = 0f;
+            
+
             IsJumping = true;
         }
 
@@ -66,7 +68,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
+    //Do the jump
     private void Jump()
     {
         EndPos = new Vector3(CarPosition.x, JumpHeight, 1);
@@ -77,6 +79,28 @@ public class PlayerController : MonoBehaviour
         if(JumpTime > 1f)
         {
             IsJumping = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider Collision)
+    {
+        //check if the object that hits the Pickup is the player
+        //Also checks if is jumping or not as a workaround due to a bug
+        if (Collision.gameObject.tag == "Pickups" && !IsJumping)
+        {
+            //Destroy the Pickup and update the score
+            GameObject.Destroy(Collision.gameObject);
+            GameObject.Find("GameController").GetComponent<GameController>().Score += 1;
+        }
+
+        //check if enemy collided with the player
+        //Also checks if is jumping or not as a workaround due to a bug
+        if (Collision.gameObject.tag == "Enemies" && !IsJumping)
+        {
+            //if the enemy collided with the player end game
+            Debug.Log("Player Collided with enemy");
+            GameObject.Destroy(gameObject);
+            GameObject.Find("GameController").GetComponent<GameController>().GameOver();
         }
     }
 }

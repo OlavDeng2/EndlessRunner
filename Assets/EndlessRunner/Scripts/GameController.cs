@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
+
+    public Text ScoreText;
 
     //variables needed for spawning enemies as well as defining the lanes
     public GameObject Enemy = null;
@@ -22,6 +25,10 @@ public class GameController : MonoBehaviour {
         //start spawning the objects needed for the level
         StartCoroutine(Spawn());
 
+    }
+    private void Update()
+    {
+        ScoreText.text = "Score is: " + Score;
     }
 
     IEnumerator Spawn()
@@ -49,5 +56,10 @@ public class GameController : MonoBehaviour {
             yield return new WaitForSeconds(SpawnTime);
         }
 
+    }
+
+    public void GameOver()
+    {
+        StopAllCoroutines();
     }
 }
