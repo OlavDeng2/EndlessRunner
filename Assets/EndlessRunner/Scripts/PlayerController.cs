@@ -98,7 +98,6 @@ public class PlayerController : MonoBehaviour
         if (Collision.gameObject.tag == "Enemies" && !IsJumping)
         {
             //if the enemy collided with the player end game
-            Debug.Log("Player Collided with enemy");
             GameObject.Destroy(gameObject);
             GameObject.Find("GameController").GetComponent<GameController>().GameOver();
         }

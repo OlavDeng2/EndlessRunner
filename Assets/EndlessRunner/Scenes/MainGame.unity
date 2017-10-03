@@ -659,7 +659,22 @@ Prefab:
     - target: {fileID: 114069569868803440, guid: bf243f65d9fd9554b8cb241f17802f96,
         type: 2}
       propertyPath: JumpHeight
-      value: 10
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 65781782344069418, guid: bf243f65d9fd9554b8cb241f17802f96,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65781782344069418, guid: bf243f65d9fd9554b8cb241f17802f96,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 65781782344069418, guid: bf243f65d9fd9554b8cb241f17802f96,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf243f65d9fd9554b8cb241f17802f96, type: 2}
@@ -691,6 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a9e9bc57931f8459150d6914372814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreText: {fileID: 1897148692}
   Enemy: {fileID: 1320717375637418, guid: 4eac7f527466d1941900c295c91b02ef, type: 2}
   PickUp: {fileID: 1280621738718444, guid: 65ebbd8cb4653eb4293752d77d2010bd, type: 2}
   LaneDistance: 5
