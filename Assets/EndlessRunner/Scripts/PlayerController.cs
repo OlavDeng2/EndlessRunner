@@ -90,7 +90,8 @@ public class PlayerController : MonoBehaviour
         {
             //Destroy the Pickup and update the score
             GameObject.Destroy(Collision.gameObject);
-            GameObject.Find("GameController").GetComponent<GameController>().Score += 1;
+            GameController.Score += 1;
+            //GameObject.Find("GameController").GetComponent<GameController>().Score += 1;
         }
 
         //check if enemy collided with the player

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -17,7 +18,7 @@ public class GameController : MonoBehaviour {
     public float SpawnTime = 1f;
 
     //initialize the score
-    public int Score = 0;
+    public static int Score = 0;
 
     // Use this for initialization
     void Start ()
@@ -60,6 +61,7 @@ public class GameController : MonoBehaviour {
 
     public void GameOver()
     {
-        StopAllCoroutines();
+        //TODO use (and learn) Modal windows
+        SceneManager.LoadScene(3);
     }
 }
