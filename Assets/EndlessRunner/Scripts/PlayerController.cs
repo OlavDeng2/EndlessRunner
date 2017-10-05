@@ -18,10 +18,15 @@ public class PlayerController : MonoBehaviour
     //Float for the car position
     Vector3 CarPosition = new Vector3(0 ,0, 0);
 
+    //For Pickup sound
+    AudioSource PickupAudio;
+
     // Use this for initialization
     void Start ()
     {
         CarPosition = transform.position;
+
+        PickupAudio = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -92,6 +97,9 @@ public class PlayerController : MonoBehaviour
             GameObject.Destroy(Collision.gameObject);
             GameController.Score += 1;
             //GameObject.Find("GameController").GetComponent<GameController>().Score += 1;
+
+            //Play the sound for the pickup
+            PickupAudio.Play();
         }
 
         //check if enemy collided with the player
